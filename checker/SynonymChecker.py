@@ -11,7 +11,7 @@ import io
 from sklearn.feature_extraction.text import CountVectorizer
 
 import json
-f = open('checker\wordfrequency.json')
+f = open('checker/wordfrequency.json')
 freq_data = json.load(f)
 f.close()
 
