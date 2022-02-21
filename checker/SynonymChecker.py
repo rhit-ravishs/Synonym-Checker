@@ -49,7 +49,9 @@ def filter_words(text):
       filtered_words.append(unique_words[i])
 
   for i in range(len(unique_words)):
-    if((freq_data.get(unique_words[i]) > 100000) and (unique_words[i] not in filtered_words)):
+    if(freq_data.get(unique_words[i] is None):
+       continue
+    elif((freq_data.get(unique_words[i]) > 100000) and (unique_words[i] not in filtered_words)):
       filtered_words.append(unique_words[i])
 
   return filtered_words
