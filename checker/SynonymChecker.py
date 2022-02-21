@@ -65,11 +65,14 @@ def find_synonyms(filtered_words):
   words = {}
 
   for word in filtered_words:
-    synonyms = dictionary.synonym('en', word)
-    synonyms = nltk.pos_tag(synonyms)
-    tag = [nltk.pos_tag([word])[0][1]]
-    synonyms = [word[0] for word in synonyms if word[1] in tag]
-    words[word] = synonyms
-
+    try:
+        synonyms = dictionary.synonym('en', word)        
+        synonyms = nltk.pos_tag(synonyms)
+        tag = [nltk.pos_tag([word])[0][1]]
+        synonyms = [word[0] for word in synonyms if word[1] in tag]
+        words[word] = synonyms
+    except:
+        continue
+        
   return words
 
