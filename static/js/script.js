@@ -54,8 +54,7 @@ function rightClick(e) {
     console.log(document.getElementById('contextMenu').firstChild.childElementCount);
 
     if (document.getElementById("contextMenu").style.display == "block"){ 
-        hideMenu(); 
-        console.log("Yama");
+        hideMenu();
     }
     else { 
         var menu = document.getElementById("contextMenu") 
